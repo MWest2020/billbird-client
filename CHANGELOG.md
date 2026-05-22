@@ -5,8 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 ## [Unreleased]
 
 ### Added
+- `2026-05-22` — CI + release workflows. `.github/workflows/ci.yml` runs `uv sync --frozen`, ruff, and pytest on every push/PR. `.github/workflows/release.yml` builds and publishes to PyPI via trusted publishing on every `v*.*.*` tag, with a version-tag-vs-pyproject sanity check before the upload step. Operator setup documented in `docs/release.md`.
 
-- `2026-05-21` — Initial release. Standalone Python client + CLI + MCP server for Billbird's REST API.
+## [0.1.0] — 2026-05-22
+
+### Added
+- Initial release. Standalone Python client + CLI + MCP server for Billbird's REST API.
   - `BillbirdClient` HTTP wrapper around `/api/v1/*` with bearer-token auth, typed errors (`BillbirdNotConfigured`, `BillbirdHTTPError` with `auth` / `not_found` / `server` / `client` hints).
   - `billbird-cli` typer command set: `hours`, `pva` (plan-vs-actual), `recent`, `mcp`.
   - `billbird-mcp` stdio server exposing four read-only tools: `billbird_hours_summary`, `billbird_plan_vs_actual`, `billbird_recent_activity`, `billbird_cycle_time` (stub until Billbird ships the endpoint).
