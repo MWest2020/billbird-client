@@ -1,13 +1,13 @@
 {
-  "role": "builder",
+  "role": "reviewer",
   "change": "apply-docs-contract",
-  "run_id": "builder-apply-docs-contract-20260713-072835",
+  "run_id": "reviewer-apply-docs-contract-20260713-073109",
   "repo": "https://github.com/MWest2020/billbird-client.git",
   "verdict": "ok",
   "subtype": "success",
-  "total_cost_usd": "0.7680869999999999",
-  "num_turns": "26",
+  "total_cost_usd": "0.6081565",
+  "num_turns": "11",
   "claude_exit": "0",
-  "finished_at": "2026-07-13T07:31:05Z",
-  "diff_hash": "69996b2ddfc01f778093fd1ee45942c5946c36f5be471fc379d51624f37f1617"
+  "finished_at": "2026-07-13T07:32:55Z",
+  "diff_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }
